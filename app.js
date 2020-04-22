@@ -11,7 +11,7 @@ let express = require('express');
 let logger = require('morgan');
 
 let app = express();
-app.set('view-engine', 'ejs')
+//app.set('view-engine', 'ejs')
 
 // Tell Express to load static files from the public/ directory
 app.use(express.static(path.join(__dirname, 'public')));
