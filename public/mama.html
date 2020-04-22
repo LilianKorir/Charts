@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mombasa</title>
+  <script src="https://unpkg.com/d3@3/d3.min.js"></script>
+      <script src="https://unpkg.com/function-plot@1/dist/function-plot.js"></script>
+
+  <!-- <script src="papaparse.min.js"></script> -->
+  <style>
+    #root {
+      background-color: chartreuse;
+    }
+    #y {
+      background-color: coral;
+    }
+  </style>
+
+</head>
+
+
+<body>
+<h1><center>Income Tax</center></h1>
+
+<div id="root"></div>
+ <!-- //<canvas id="root" width="200" height="80"></canvas> -->
+  <script>
+
+    //chartIt();
+
+//const d3 = require("d3");
+//const functionPlot = require("function-plot");
+
+const root = document.querySelector("#root");
+
+functionPlot({
+  target: root,
+  yAxis: { domain: [-1, 9] },
+  tip: {
+    renderer: function() {}
+  },
+  grid: true,
+  data: [
+    {
+      fn: "x^2",
+      derivative: {
+        fn: "2 * x",
+        updateOnMouseMove: true
+      }
+    }
+  ]
+});
+
+  </script>
+
+
+
+   <!-- <button onclick="getData();chartIt();" id="btn1">Submit</button></p> -->
+
+</body>
+</html>
